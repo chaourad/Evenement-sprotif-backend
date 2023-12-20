@@ -77,3 +77,5 @@ C:\Users\chaou\Desktop\cours\mobile\event\obj\Debug\net7.0\event.pdb
 C:\Users\chaou\Desktop\cours\mobile\event\obj\Debug\net7.0\event.genruntimeconfig.cache
 C:\Users\chaou\Desktop\cours\mobile\event\obj\Debug\net7.0\ref\event.dll
 C:\Users\chaou\Desktop\cours\mobile\event\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\chaou\Desktop\cours\mobile\event\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\chaou\Desktop\cours\mobile\event\bin\Debug\net7.0\Twilio.dll

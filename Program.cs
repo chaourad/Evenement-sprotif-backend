@@ -1,6 +1,7 @@
 using System.Text;
 using evenement.Data;
 using evenement.ExceptionHandlerMidls;
+using evenement.Extensions;
 using evenement.Repository;
 using evenement.Repository.IRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -16,16 +17,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IRoleRepoitory,RoleRepository>();
+builder.Services.AddApplicationRepositories();
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddSingleton<ExceptionMidl>();
+builder.Services.AddDataBaseConfig(builder.Configuration);
 
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options => {
     options.TokenValidationParameters = new TokenValidationParameters 
